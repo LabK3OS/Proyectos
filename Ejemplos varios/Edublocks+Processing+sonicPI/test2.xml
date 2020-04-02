@@ -1,0 +1,281 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="*+vFrxo9eqW3-6^aRu1D">b1</variable>
+    <variable type="" id="E)31u=6FCcP~el~*tbE3">i</variable>
+    <variable type="" id="z3,Oj`-3=+Fe_@JjK7.C">g</variable>
+    <variable type="" id="rvPj5N`|8jd0Sa~N{uAv">r</variable>
+    <variable type="" id="dT.6~YxTYs~w;F`?I[2[">m</variable>
+    <variable type="" id="5?D123N|0FfE$kt9q~fv">n</variable>
+    <variable type="" id="[i]}OrUM@CpS3(NYR0{O">o</variable>
+    <variable type="" id="2ZXnU$oi4{ikKs$3.fX-">j</variable>
+    <variable type="" id="Tlj,7Fir^:4!jyy53C*B">p</variable>
+    <variable type="" id="gDYTXQ?009awb{e~gOq?">q</variable>
+    <variable type="" id="X?l(HId}WxGM|r8wUw+J">b</variable>
+    <variable type="" id="rr]o5q:6[[g7{uwc;3PC">s</variable>
+    <variable type="" id="1IZg(PstQh0?4),uhXMY">t</variable>
+    <variable type="" id="H{Pi#QLlP6gR,9FZ7}n-">u</variable>
+  </variables>
+  <block type="webtypeanything" id="@if%@J@YFxS2,-Lcljw." x="273" y="196">
+    <value name="stuff">
+      <shadow type="textinline" id="m3|:2$nkt[eP0!6a~2hj">
+        <field name="text">from p5 import *</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="importgpiozero" id="eJcC-~}]^|k-6^NL;uSV">
+        <next>
+          <block type="import_sonic" id="IUI),z8S*4M+[QnZ%weZ">
+            <next>
+              <block type="buttonset" id="MJts_UV4][#TQY3)uNT1">
+                <field name="button" id="*+vFrxo9eqW3-6^aRu1D" variabletype="">b1</field>
+                <value name="text">
+                  <shadow type="textinline" id="Lj**6?ly--SH)b7JA%KV">
+                    <field name="text">20</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="variables_set" id="W*bERF3oYV-LX!m+vFX(">
+                    <field name="VAR" id="E)31u=6FCcP~el~*tbE3" variabletype="">i</field>
+                    <field name="NAME">=</field>
+                    <value name="varset">
+                      <shadow type="textinline" id="C0yt(R,nC[9pprr7:9qc">
+                        <field name="text">0</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="Ij%W9@c*}8U,4T`q$YNJ">
+                        <field name="VAR" id="rvPj5N`|8jd0Sa~N{uAv" variabletype="">r</field>
+                        <field name="NAME">=</field>
+                        <value name="varset">
+                          <shadow type="textinline" id="cZ#Q:8=(/?7F@QdXRnDZ">
+                            <field name="text">0</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="webdefine" id=",V5^]j7yot;JH+f,x51B">
+                            <value name="1">
+                              <shadow type="textinline" id="^(m2WcZqOS@3uZJB~qYJ">
+                                <field name="text">setup</field>
+                              </shadow>
+                            </value>
+                            <value name="2">
+                              <shadow type="textinline" id="zVRfA7f$@-Bbq1~9t51b">
+                                <field name="text"></field>
+                              </shadow>
+                            </value>
+                            <statement name="DO">
+                              <block type="p_size" id="%@Ay($q{|[KPx6Enyl_M">
+                                <value name="text">
+                                  <shadow type="textinline" id="o:BBXdjtOjFs]RN_,eO2">
+                                    <field name="text">640,360</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="webtypeanything" id="}9%{=]l5Txn~6FDG!VT~">
+                                    <value name="stuff">
+                                      <shadow type="textinline" id="tHbT)!IjjxGek$fa`Lcd">
+                                        <field name="text">no_stroke()</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="p_background" id="_h?^ZujGg#fcP:j)3GnJ">
+                                        <value name="text">
+                                          <shadow type="textinline" id="N/2$Kvq~5k|6{+~Tx1ND">
+                                            <field name="text">204</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="webdefine" id="C@P1_1O76p-/#eQ3`wMH">
+                                <value name="1">
+                                  <shadow type="textinline" id="J!H^E{#^=2ez_,Lx%5iZ">
+                                    <field name="text">draw</field>
+                                  </shadow>
+                                </value>
+                                <value name="2">
+                                  <shadow type="textinline" id="/60+tw@691wxY3TvTYa*">
+                                    <field name="text"></field>
+                                  </shadow>
+                                </value>
+                                <statement name="DO">
+                                  <block type="webtypeanything" id="P[Az)Kfa42/s3J{VjsUW">
+                                    <value name="stuff">
+                                      <shadow type="textinline" id="Tu8-auARDh8ztbn@/4h9">
+                                        <field name="text">global i,j</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="webifinline" id="/xWLlm6KJ_P,S=a^T4MP">
+                                        <value name="iftext">
+                                          <shadow type="textinline" id="6yYDkpl#eq|J}U?*E}9Y">
+                                            <field name="text">b1.is_pressed</field>
+                                          </shadow>
+                                          <block type="webnot" id="N-(zDAuVC~+(R|~RIN91">
+                                            <value name="bool">
+                                              <shadow type="textinline" id="l8,B#[h`OPPOq8*I/yRc">
+                                                <field name="text">b1.is_pressed</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="ifstate">
+                                          <block type="variables_set" id="aBT3IbqN|W2lP(9|k)-!">
+                                            <field name="VAR" id="E)31u=6FCcP~el~*tbE3" variabletype="">i</field>
+                                            <field name="NAME">=</field>
+                                            <value name="varset">
+                                              <shadow type="textinline" id="o~=W(2v0`OpHgSU/)[36">
+                                                <field name="text">0</field>
+                                              </shadow>
+                                              <block type="random_randint" id="](FC0|3wSgGb_S7Yr(bn">
+                                                <value name="text">
+                                                  <shadow type="textinline" id="X3#j_-gtuu$+dfF$1dc]">
+                                                    <field name="text">0,639</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="variables_set" id="?dS;1`^Q,qp9oma4#Pg7">
+                                                <field name="VAR" id="2ZXnU$oi4{ikKs$3.fX-" variabletype="">j</field>
+                                                <field name="NAME">=</field>
+                                                <value name="varset">
+                                                  <shadow type="textinline" id="AF151v9h}x9-TI*.O::=">
+                                                    <field name="text">i</field>
+                                                  </shadow>
+                                                  <block type="random_randint" id="PtXKUR9%i51bhwI7YQ[n">
+                                                    <value name="text">
+                                                      <shadow type="textinline" id="R@2h;BkG,70Zgv+RbO8r">
+                                                        <field name="text">0,359</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="E?D??MGJQ}#;-nOGiG93">
+                                                    <field name="VAR" id="z3,Oj`-3=+Fe_@JjK7.C" variabletype="">g</field>
+                                                    <field name="NAME">=</field>
+                                                    <value name="varset">
+                                                      <shadow type="textinline" id="_aWyg|U1@JJkRpvVH39p">
+                                                        <field name="text">k</field>
+                                                      </shadow>
+                                                      <block type="random_randint" id="YS^ntAaZ$AlU](FPVx)Y">
+                                                        <value name="text">
+                                                          <shadow type="textinline" id="*?.rnrG})vzMQHe8Z`OL">
+                                                            <field name="text">0,256</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="variables_set" id="GH=pX|5M;(Zz=`0+$jiM">
+                                                        <field name="VAR" id="rvPj5N`|8jd0Sa~N{uAv" variabletype="">r</field>
+                                                        <field name="NAME">=</field>
+                                                        <value name="varset">
+                                                          <shadow type="textinline" id="_aWyg|U1@JJkRpvVH39p">
+                                                            <field name="text">k</field>
+                                                          </shadow>
+                                                          <block type="random_randint" id="pg@~P/Hizxj.MOh%/y%Y">
+                                                            <value name="text">
+                                                              <shadow type="textinline" id="_k9vqHJYn(biZNw3bN{3">
+                                                                <field name="text">0,256</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="variables_set" id="6d,C3k|d8DXPH})cqq9.">
+                                                            <field name="VAR" id="X?l(HId}WxGM|r8wUw+J" variabletype="">b</field>
+                                                            <field name="NAME">=</field>
+                                                            <value name="varset">
+                                                              <shadow type="textinline" id="2bxpG7*{CX4P!@Pfm7Fg">
+                                                                <field name="text">0</field>
+                                                              </shadow>
+                                                              <block type="random_randint" id="?7$t-nzywM.xu{Tj|DI7">
+                                                                <value name="text">
+                                                                  <shadow type="textinline" id=":pfD0ChpTpMY1]dv=9.y">
+                                                                    <field name="text">0,256</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="play" id="3kK:ji4j=#p#9u}#5VoB">
+                                                                <value name="text">
+                                                                  <shadow type="textinline" id="qFhms|kc5+~UP_{U(p%)">
+                                                                    <field name="text">g</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="p_fill" id="}?TkA^HPjN*$1en4pqa?">
+                                                                    <value name="text">
+                                                                      <shadow type="textinline" id="8DhAk/zb^o|^{KS7hFy.">
+                                                                        <field name="text">r,g,b</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="p_ellipse" id="e$d6Pl^)1~4UVvK9JE`)">
+                                                                        <value name="text">
+                                                                          <shadow type="textinline" id=",^n.Io0!+8$:?pt$1zIo">
+                                                                            <field name="text">(i,j),20,20</field>
+                                                                          </shadow>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="p_run" id="wIl%vj]{.qcIPF4S0l@%"></block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="operators2" id="Y=yVC;)Yb.QZ,3fly.w|" x="523" y="852">
+    <field name="operators">+</field>
+    <value name="first">
+      <shadow type="textinline" id="AU|j6dy/vs~Z~Fwiv[5H">
+        <field name="text">True</field>
+      </shadow>
+      <block type="variables_get" id="!9_2/M5SpCzG!XbM?V8g">
+        <field name="VAR" id="E)31u=6FCcP~el~*tbE3" variabletype="">i</field>
+      </block>
+    </value>
+    <value name="last">
+      <shadow type="textinline" id="./$d%5)V}2X($[ldg~%)">
+        <field name="text">5</field>
+      </shadow>
+    </value>
+  </block>
+</xml>
