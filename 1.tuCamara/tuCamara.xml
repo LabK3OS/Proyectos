@@ -33,305 +33,364 @@
     <variable type="" id="u2ufEY1R).rrzLf=%ar`">nombre</variable>
     <variable type="" id="N!D`c^|V]{79fub@j;:7">Imagen2</variable>
   </variables>
-  <block type="import_picamera" id="NL:w3(Em5X5Kt/aN|)d5" x="82" y="-380">
-    <comment pinned="true" h="146" w="161">Importar las librerías necesarias para que nuestro código funcione</comment>
+  <block type="import_picamera" id="NL:w3(Em5X5Kt/aN|)d5" x="1012" y="-779">
     <next>
-      <block type="import_time" id="z^4loos@c8tsFl~Fs+GX">
+      <block type="senseimport" id="[vZ7n5UH{+w..+]at/10">
         <next>
-          <block type="importmb" id="vJmU~[RI.U|FStd@#]+S">
+          <block type="senseimportemu" id="oS@85rA|X=ah?KRjIu`)">
             <next>
-              <block type="senseimport" id="[vZ7n5UH{+w..+]at/10">
-                <next>
-                  <block type="senseimportemu" id="oS@85rA|X=ah?KRjIu`)">
-                    <next>
-                      <block type="importgpiozero" id="FbW_^T}U?tn]JKt);#io"></block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </next>
-  </block>
-  <block type="webclass" id="}~^g/w9z#:{M2$X,-ZG." x="982" y="-204">
-    <comment pinned="true" h="120" w="160">Maquina de reconocimiento facial</comment>
-    <value name="class">
-      <shadow type="textinline" id="d+g6|JtucAa#H=AGsE7}">
-        <field name="text">Maquina_de_reconocimiento_facial()</field>
-      </shadow>
-    </value>
-    <statement name="DO">
-      <block type="create_camera" id="r^XRD`#A@h)4UkA1.=b3">
-        <next>
-          <block type="set_resolution" id="md%UM0X-.d?usbfIFTm-">
-            <value name="text">
-              <shadow type="textinline" id="WX`gdv|d(K4z/y[vf;$=">
-                <field name="text">320</field>
-              </shadow>
-            </value>
-            <value name="text1">
-              <shadow type="textinline" id="b:d#XY`zg49C;ddA3}l.">
-                <field name="text">240</field>
-              </shadow>
-            </value>
-            <next>
-              <block type="webdefine" id=",*?;{Z7LvzN1d(6lIv*7">
-                <value name="1">
-                  <shadow type="textinline" id="5l-uRzo8;kR~l6+MS-%R">
-                    <field name="text"> __init__</field>
-                  </shadow>
-                </value>
-                <value name="2">
-                  <shadow type="textinline" id="Y.;vZy;(^x62ydq;]BfQ">
-                    <field name="text">self, ruta1, ruta2</field>
+              <block type="webclass" id="}~^g/w9z#:{M2$X,-ZG.">
+                <value name="class">
+                  <shadow type="textinline" id="d+g6|JtucAa#H=AGsE7}">
+                    <field name="text">Maquina_de_reconocimiento_facial()</field>
                   </shadow>
                 </value>
                 <statement name="DO">
-                  <block type="variables_set" id="At|t_;=U*$oq(qS5S?z,">
-                    <field name="VAR" id="V(G~Q);.zGQ`en$.jQBs" variabletype="">Imagen1</field>
-                    <field name="NAME">=</field>
-                    <value name="varset">
-                      <shadow type="textinline" id=",^3}A7mEth0aA-7qINth">
-                        <field name="text">face_recognition.load_image_file(ruta1)</field>
-                      </shadow>
-                    </value>
+                  <block type="create_camera" id="r^XRD`#A@h)4UkA1.=b3">
                     <next>
-                      <block type="variables_set" id="OLOs%#i5D@mi^_.wpTh6">
-                        <field name="VAR" id="N!D`c^|V]{79fub@j;:7" variabletype="">Imagen2</field>
-                        <field name="NAME">=</field>
-                        <value name="varset">
-                          <shadow type="textinline" id="cky][Q)8yCI86/gyT8lv">
-                            <field name="text">face_recognition.load_image_file(ruta2)</field>
+                      <block type="set_resolution" id="md%UM0X-.d?usbfIFTm-">
+                        <value name="text">
+                          <shadow type="textinline" id="WX`gdv|d(K4z/y[vf;$=">
+                            <field name="text">320</field>
+                          </shadow>
+                        </value>
+                        <value name="text1">
+                          <shadow type="textinline" id="b:d#XY`zg49C;ddA3}l.">
+                            <field name="text">240</field>
                           </shadow>
                         </value>
                         <next>
-                          <block type="webtypeanything" id="3)Z#1K9F+~2CL7]4m;N%">
-                            <value name="stuff">
-                              <shadow type="textinline" id="C(0?pF3pB?]=^@j4n/FK">
-                                <field name="text">self.Rostro1=face_recognition.face_encodings(Imagen1)[0]</field>
-                              </shadow>
-                            </value>
-                            <next>
-                              <block type="webtypeanything" id="V/E=fkV{Uz*;(/oFhW@4">
-                                <value name="stuff">
-                                  <shadow type="textinline" id="zIjsCuJ4!(]+bbB5D2B]">
-                                    <field name="text">self.Rostro2=face_recognition.face_encodings(Imagen2)[0]</field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-                <next>
-                  <block type="webdefine" id="h457cLW|d`8#a+~kA%+J">
-                    <value name="1">
-                      <shadow type="textinline" id="eUz`tmp[0wk7DncQ|fM~">
-                        <field name="text">mostrarCamara</field>
-                      </shadow>
-                    </value>
-                    <value name="2">
-                      <shadow type="textinline" id="7!~}124F$W%4tch;=rls">
-                        <field name="text">self</field>
-                      </shadow>
-                    </value>
-                    <statement name="DO">
-                      <block type="webtypeanything" id="TgA:[~nR`D@J{Qrdl%V4">
-                        <value name="stuff">
-                          <shadow type="textinline" id="5L7-*JvQB=fJq3i7#IAa">
-                            <field name="text">self.camera.start_preview()</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </statement>
-                    <next>
-                      <block type="webdefine" id=".bY`0[[fhEs+UMErI@Gk">
-                        <value name="1">
-                          <shadow type="textinline" id=",+,dBakwYFp*K]2*2n/A">
-                            <field name="text">ocultarCamara</field>
-                          </shadow>
-                        </value>
-                        <value name="2">
-                          <shadow type="textinline" id="7RDx~MK$u5(^|}VdaLZ[">
-                            <field name="text">self</field>
-                          </shadow>
-                        </value>
-                        <statement name="DO">
-                          <block type="webtypeanything" id="?$2PK6-fV~I/$vH_4Ve?">
-                            <value name="stuff">
-                              <shadow type="textinline" id="%{xM?-]z*bIB^d@Iz%xW">
-                                <field name="text">self.camera.stop_preview()</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </statement>
-                        <next>
-                          <block type="webdefine" id="XesCq{0~LKsrl|Vapc-=">
+                          <block type="webdefine" id=",*?;{Z7LvzN1d(6lIv*7">
                             <value name="1">
-                              <shadow type="textinline" id="WEhshUGft2eF5Ll*tz10">
-                                <field name="text">aQuienVeo</field>
+                              <shadow type="textinline" id="5l-uRzo8;kR~l6+MS-%R">
+                                <field name="text"> __init__</field>
                               </shadow>
                             </value>
                             <value name="2">
-                              <shadow type="textinline" id="=PJl//7[j=L:dmj-ps11">
-                                <field name="text">self</field>
+                              <shadow type="textinline" id="Y.;vZy;(^x62ydq;]BfQ">
+                                <field name="text">self, ruta1, ruta2</field>
                               </shadow>
                             </value>
                             <statement name="DO">
-                              <block type="variables_set" id="BsjZx)AfNvnvZrW+~kP,">
-                                <field name="VAR" id="_$*oDmb+5`G9p.vo!`H," variabletype="">output</field>
+                              <block type="variables_set" id="At|t_;=U*$oq(qS5S?z,">
+                                <field name="VAR" id="V(G~Q);.zGQ`en$.jQBs" variabletype="">Imagen1</field>
                                 <field name="NAME">=</field>
                                 <value name="varset">
-                                  <shadow type="textinline" id="?s5x#m.-QbfUMAB2(d4q">
-                                    <field name="text">np.empty((240, 320, 3), dtype=np.uint8)</field>
+                                  <shadow type="textinline" id=",^3}A7mEth0aA-7qINth">
+                                    <field name="text">face_recognition.load_image_file(ruta1)</field>
                                   </shadow>
                                 </value>
                                 <next>
-                                  <block type="create_list" id="W}AyiWI/5dPo7fMOH6?h">
-                                    <field name="list" id="c_~2~/8,6~rKu(PkgStU" variabletype="">face_locations</field>
-                                    <value name="text">
-                                      <shadow type="textinline" id="hA8UFb%(cBW|__JV-(Pq">
-                                        <field name="text"></field>
+                                  <block type="variables_set" id="OLOs%#i5D@mi^_.wpTh6">
+                                    <field name="VAR" id="N!D`c^|V]{79fub@j;:7" variabletype="">Imagen2</field>
+                                    <field name="NAME">=</field>
+                                    <value name="varset">
+                                      <shadow type="textinline" id="cky][Q)8yCI86/gyT8lv">
+                                        <field name="text">face_recognition.load_image_file(ruta2)</field>
                                       </shadow>
                                     </value>
                                     <next>
-                                      <block type="create_list" id=")XSD{stH~W]mGPCLoSbR">
-                                        <field name="list" id="H/Aj8Vgla_ftA~25*$;t" variabletype="">face_encodings</field>
-                                        <value name="text">
-                                          <shadow type="textinline" id="Yg,ywhpkg~IH}FZjay~g">
-                                            <field name="text"></field>
+                                      <block type="webtypeanything" id="3)Z#1K9F+~2CL7]4m;N%">
+                                        <value name="stuff">
+                                          <shadow type="textinline" id="C(0?pF3pB?]=^@j4n/FK">
+                                            <field name="text">self.Rostro1=face_recognition.face_encodings(Imagen1)[0]</field>
                                           </shadow>
                                         </value>
                                         <next>
-                                          <block type="webvarprint" id="j2gbzPZ!LkBvfyq=4XiA">
-                                            <value name="var">
-                                              <shadow type="textinline" id="e^)j1%UM-expCb8`e69/">
-                                                <field name="text">"Capturando imagen."</field>
+                                          <block type="webtypeanything" id="V/E=fkV{Uz*;(/oFhW@4">
+                                            <value name="stuff">
+                                              <shadow type="textinline" id="zIjsCuJ4!(]+bbB5D2B]">
+                                                <field name="text">self.Rostro2=face_recognition.face_encodings(Imagen2)[0]</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="webdefine" id="h457cLW|d`8#a+~kA%+J">
+                                <value name="1">
+                                  <shadow type="textinline" id="eUz`tmp[0wk7DncQ|fM~">
+                                    <field name="text">mostrarCamara</field>
+                                  </shadow>
+                                </value>
+                                <value name="2">
+                                  <shadow type="textinline" id="7!~}124F$W%4tch;=rls">
+                                    <field name="text">self</field>
+                                  </shadow>
+                                </value>
+                                <statement name="DO">
+                                  <block type="webtypeanything" id="TgA:[~nR`D@J{Qrdl%V4">
+                                    <value name="stuff">
+                                      <shadow type="textinline" id="5L7-*JvQB=fJq3i7#IAa">
+                                        <field name="text">self.camera.start_preview()</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="webdefine" id=".bY`0[[fhEs+UMErI@Gk">
+                                    <value name="1">
+                                      <shadow type="textinline" id=",+,dBakwYFp*K]2*2n/A">
+                                        <field name="text">ocultarCamara</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="2">
+                                      <shadow type="textinline" id="7RDx~MK$u5(^|}VdaLZ[">
+                                        <field name="text">self</field>
+                                      </shadow>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="webtypeanything" id="?$2PK6-fV~I/$vH_4Ve?">
+                                        <value name="stuff">
+                                          <shadow type="textinline" id="%{xM?-]z*bIB^d@Iz%xW">
+                                            <field name="text">self.camera.stop_preview()</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="webdefine" id="XesCq{0~LKsrl|Vapc-=">
+                                        <value name="1">
+                                          <shadow type="textinline" id="WEhshUGft2eF5Ll*tz10">
+                                            <field name="text">aQuienVeo</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="2">
+                                          <shadow type="textinline" id="=PJl//7[j=L:dmj-ps11">
+                                            <field name="text">self</field>
+                                          </shadow>
+                                        </value>
+                                        <statement name="DO">
+                                          <block type="variables_set" id="BsjZx)AfNvnvZrW+~kP,">
+                                            <field name="VAR" id="_$*oDmb+5`G9p.vo!`H," variabletype="">output</field>
+                                            <field name="NAME">=</field>
+                                            <value name="varset">
+                                              <shadow type="textinline" id="?s5x#m.-QbfUMAB2(d4q">
+                                                <field name="text">np.empty((240, 320, 3), dtype=np.uint8)</field>
                                               </shadow>
                                             </value>
                                             <next>
-                                              <block type="webtypeanything" id="23/V2h9?nS#2wmyBFR(E">
-                                                <value name="stuff">
-                                                  <shadow type="textinline" id="8[T5Dz.XF#8@UA:ezQF0">
-                                                    <field name="text">self.camera.capture(output,format="rgb")</field>
+                                              <block type="create_list" id="W}AyiWI/5dPo7fMOH6?h">
+                                                <field name="list" id="c_~2~/8,6~rKu(PkgStU" variabletype="">face_locations</field>
+                                                <value name="text">
+                                                  <shadow type="textinline" id="hA8UFb%(cBW|__JV-(Pq">
+                                                    <field name="text"></field>
                                                   </shadow>
                                                 </value>
                                                 <next>
-                                                  <block type="variables_set" id="o;;e*GGgglUGA*FB{wI8">
-                                                    <field name="VAR" id="c_~2~/8,6~rKu(PkgStU" variabletype="">face_locations</field>
-                                                    <field name="NAME">=</field>
-                                                    <value name="varset">
-                                                      <shadow type="textinline" id="([lgUra!OMP6(f0944AT">
-                                                        <field name="text">face_recognition.face_locations(output)</field>
+                                                  <block type="create_list" id=")XSD{stH~W]mGPCLoSbR">
+                                                    <field name="list" id="H/Aj8Vgla_ftA~25*$;t" variabletype="">face_encodings</field>
+                                                    <value name="text">
+                                                      <shadow type="textinline" id="Yg,ywhpkg~IH}FZjay~g">
+                                                        <field name="text"></field>
                                                       </shadow>
                                                     </value>
                                                     <next>
-                                                      <block type="webvarprint" id="d`l|KcTxUG^au0(IjJyI">
+                                                      <block type="webvarprint" id="j2gbzPZ!LkBvfyq=4XiA">
                                                         <value name="var">
-                                                          <shadow type="textinline" id="LMedYpROMU,tg#jvltei">
-                                                            <field name="text">"Encontré {} cara(s) en la imagen.".format(len(face_locations))</field>
+                                                          <shadow type="textinline" id="e^)j1%UM-expCb8`e69/">
+                                                            <field name="text">"Capturando imagen."</field>
                                                           </shadow>
                                                         </value>
                                                         <next>
-                                                          <block type="variables_set" id="hcDBkdnL~[f2-HPmr9(z">
-                                                            <field name="VAR" id="H/Aj8Vgla_ftA~25*$;t" variabletype="">face_encodings</field>
-                                                            <field name="NAME">=</field>
-                                                            <value name="varset">
-                                                              <shadow type="textinline" id="qA2-9arOAh}c++,f.%rf">
-                                                                <field name="text">face_recognition.face_encodings(output, face_locations)</field>
+                                                          <block type="webtypeanything" id="23/V2h9?nS#2wmyBFR(E">
+                                                            <value name="stuff">
+                                                              <shadow type="textinline" id="8[T5Dz.XF#8@UA:ezQF0">
+                                                                <field name="text">self.camera.capture(output,format="rgb")</field>
                                                               </shadow>
                                                             </value>
                                                             <next>
-                                                              <block type="variables_set" id="OfWe8#,nWtfp9p0m%j56">
-                                                                <field name="VAR" id="w=r7Oky3bkO4#`;0xk/$" variabletype="">caras_detectadas</field>
+                                                              <block type="variables_set" id="o;;e*GGgglUGA*FB{wI8">
+                                                                <field name="VAR" id="c_~2~/8,6~rKu(PkgStU" variabletype="">face_locations</field>
                                                                 <field name="NAME">=</field>
                                                                 <value name="varset">
-                                                                  <shadow type="textinline" id="OJ[TqZ$AGqbY{UG{c{(+">
-                                                                    <field name="text">0</field>
+                                                                  <shadow type="textinline" id="([lgUra!OMP6(f0944AT">
+                                                                    <field name="text">face_recognition.face_locations(output)</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <next>
-                                                                  <block type="variables_set" id="~v0ZDscc.cd/HKm,E02D">
-                                                                    <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
-                                                                    <field name="NAME">=</field>
-                                                                    <value name="varset">
-                                                                      <shadow type="textinline" id="aBCN5K[j*|[F^IfJS5A2">
-                                                                        <field name="text">"Nadie"</field>
+                                                                  <block type="webvarprint" id="d`l|KcTxUG^au0(IjJyI">
+                                                                    <value name="var">
+                                                                      <shadow type="textinline" id="LMedYpROMU,tg#jvltei">
+                                                                        <field name="text">"Encontré {} cara(s) en la imagen.".format(len(face_locations))</field>
                                                                       </shadow>
                                                                     </value>
                                                                     <next>
-                                                                      <block type="webadvancedforloops" id="Yu,Er=L0pLfB=}$zPZHD">
-                                                                        <value name="x">
-                                                                          <shadow type="textinline" id="aVh47k[AoMES+Ak*bZWO">
-                                                                            <field name="text">face_encoding</field>
+                                                                      <block type="variables_set" id="hcDBkdnL~[f2-HPmr9(z">
+                                                                        <field name="VAR" id="H/Aj8Vgla_ftA~25*$;t" variabletype="">face_encodings</field>
+                                                                        <field name="NAME">=</field>
+                                                                        <value name="varset">
+                                                                          <shadow type="textinline" id="qA2-9arOAh}c++,f.%rf">
+                                                                            <field name="text">face_recognition.face_encodings(output, face_locations)</field>
                                                                           </shadow>
                                                                         </value>
-                                                                        <value name="y">
-                                                                          <shadow type="textinline" id="dI7+jZ2{s}A;1Lp2Xh1Y">
-                                                                            <field name="text">face_encodings</field>
-                                                                          </shadow>
-                                                                        </value>
-                                                                        <statement name="DO">
-                                                                          <block type="variables_set" id="oc0SnNB/XVj|E!/WJS}x">
+                                                                        <next>
+                                                                          <block type="variables_set" id="OfWe8#,nWtfp9p0m%j56">
                                                                             <field name="VAR" id="w=r7Oky3bkO4#`;0xk/$" variabletype="">caras_detectadas</field>
                                                                             <field name="NAME">=</field>
                                                                             <value name="varset">
-                                                                              <shadow type="textinline" id="jW_upK}i)`%~:mCPD]Z!">
-                                                                                <field name="text">1</field>
+                                                                              <shadow type="textinline" id="OJ[TqZ$AGqbY{UG{c{(+">
+                                                                                <field name="text">0</field>
                                                                               </shadow>
                                                                             </value>
                                                                             <next>
-                                                                              <block type="variables_set" id="6K4-SF31gIz$^1h_SoH^">
-                                                                                <field name="VAR" id="6!ED)olcitB1;2}:c8W+" variabletype="">match</field>
+                                                                              <block type="variables_set" id="~v0ZDscc.cd/HKm,E02D">
+                                                                                <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
                                                                                 <field name="NAME">=</field>
                                                                                 <value name="varset">
-                                                                                  <shadow type="textinline" id="JK+2P)^/=8~L7fE(6x;B">
-                                                                                    <field name="text">face_recognition.compare_faces([self.Rostro1,self.Rostro2], face_encoding)</field>
+                                                                                  <shadow type="textinline" id="aBCN5K[j*|[F^IfJS5A2">
+                                                                                    <field name="text">"Nadie"</field>
                                                                                   </shadow>
                                                                                 </value>
                                                                                 <next>
-                                                                                  <block type="webifinline" id="p/4)ZlG#^kIq:]vYeKyq">
-                                                                                    <value name="iftext">
-                                                                                      <shadow type="textinline" id="C@FWh:#fb9G](m3o;QGF">
-                                                                                        <field name="text">True</field>
+                                                                                  <block type="webadvancedforloops" id="Yu,Er=L0pLfB=}$zPZHD">
+                                                                                    <value name="x">
+                                                                                      <shadow type="textinline" id="aVh47k[AoMES+Ak*bZWO">
+                                                                                        <field name="text">face_encoding</field>
                                                                                       </shadow>
-                                                                                      <block type="selectlist2" id="|^hgAc)VFLY?wR:xnb%G">
-                                                                                        <field name="list" id="6!ED)olcitB1;2}:c8W+" variabletype="">match</field>
-                                                                                        <value name="NAME">
-                                                                                          <shadow type="textinline" id="uA{wi%3=BIFlI$NNU){G">
-                                                                                            <field name="text">0</field>
-                                                                                          </shadow>
-                                                                                        </value>
-                                                                                      </block>
                                                                                     </value>
-                                                                                    <statement name="ifstate">
-                                                                                      <block type="webtypeanything" id="x*uF~{__8K},.jOI@m5V">
-                                                                                        <value name="stuff">
-                                                                                          <shadow type="textinline" id="rb^I9!@Z1LIdmdbH1Peb">
-                                                                                            <field name="text">self.ocultarCamara()</field>
+                                                                                    <value name="y">
+                                                                                      <shadow type="textinline" id="dI7+jZ2{s}A;1Lp2Xh1Y">
+                                                                                        <field name="text">face_encodings</field>
+                                                                                      </shadow>
+                                                                                    </value>
+                                                                                    <statement name="DO">
+                                                                                      <block type="variables_set" id="oc0SnNB/XVj|E!/WJS}x">
+                                                                                        <field name="VAR" id="w=r7Oky3bkO4#`;0xk/$" variabletype="">caras_detectadas</field>
+                                                                                        <field name="NAME">=</field>
+                                                                                        <value name="varset">
+                                                                                          <shadow type="textinline" id="jW_upK}i)`%~:mCPD]Z!">
+                                                                                            <field name="text">1</field>
                                                                                           </shadow>
                                                                                         </value>
                                                                                         <next>
-                                                                                          <block type="variables_set" id="NY/2U!waf{$g3#c[6E::">
-                                                                                            <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
+                                                                                          <block type="variables_set" id="6K4-SF31gIz$^1h_SoH^">
+                                                                                            <field name="VAR" id="6!ED)olcitB1;2}:c8W+" variabletype="">match</field>
                                                                                             <field name="NAME">=</field>
                                                                                             <value name="varset">
-                                                                                              <shadow type="textinline" id="VyXm~`u49^3_}zyI0SfL">
-                                                                                                <field name="text">"Barack Obama"</field>
+                                                                                              <shadow type="textinline" id="JK+2P)^/=8~L7fE(6x;B">
+                                                                                                <field name="text">face_recognition.compare_faces([self.Rostro1,self.Rostro2], face_encoding)</field>
                                                                                               </shadow>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="webvarprint" id="fH/]i^NBWKOrid+$vaVt">
-                                                                                                <value name="var">
-                                                                                                  <shadow type="textinline" id="c]ni$X5=nDPeGv2pKKS7">
-                                                                                                    <field name="text">"Veo a Obama"</field>
+                                                                                              <block type="webifinline" id="p/4)ZlG#^kIq:]vYeKyq">
+                                                                                                <value name="iftext">
+                                                                                                  <shadow type="textinline" id="C@FWh:#fb9G](m3o;QGF">
+                                                                                                    <field name="text">True</field>
                                                                                                   </shadow>
+                                                                                                  <block type="selectlist2" id="|^hgAc)VFLY?wR:xnb%G">
+                                                                                                    <field name="list" id="6!ED)olcitB1;2}:c8W+" variabletype="">match</field>
+                                                                                                    <value name="NAME">
+                                                                                                      <shadow type="textinline" id="uA{wi%3=BIFlI$NNU){G">
+                                                                                                        <field name="text">0</field>
+                                                                                                      </shadow>
+                                                                                                    </value>
+                                                                                                  </block>
                                                                                                 </value>
+                                                                                                <statement name="ifstate">
+                                                                                                  <block type="webtypeanything" id="x*uF~{__8K},.jOI@m5V">
+                                                                                                    <value name="stuff">
+                                                                                                      <shadow type="textinline" id="rb^I9!@Z1LIdmdbH1Peb">
+                                                                                                        <field name="text">self.ocultarCamara()</field>
+                                                                                                      </shadow>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="variables_set" id="NY/2U!waf{$g3#c[6E::">
+                                                                                                        <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
+                                                                                                        <field name="NAME">=</field>
+                                                                                                        <value name="varset">
+                                                                                                          <shadow type="textinline" id="VyXm~`u49^3_}zyI0SfL">
+                                                                                                            <field name="text">"Persona1"</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="webvarprint" id="fH/]i^NBWKOrid+$vaVt">
+                                                                                                            <value name="var">
+                                                                                                              <shadow type="textinline" id="c]ni$X5=nDPeGv2pKKS7">
+                                                                                                                <field name="text">"Veo a Persona1"</field>
+                                                                                                              </shadow>
+                                                                                                            </value>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </statement>
+                                                                                                <next>
+                                                                                                  <block type="webifinline" id="Um-(T@T-$ZV5U=RQD/()">
+                                                                                                    <value name="iftext">
+                                                                                                      <shadow type="textinline" id="C@FWh:#fb9G](m3o;QGF">
+                                                                                                        <field name="text">True</field>
+                                                                                                      </shadow>
+                                                                                                      <block type="selectlist2" id="fNsd+?fZRMDNPKqppm`I">
+                                                                                                        <field name="list" id="6!ED)olcitB1;2}:c8W+" variabletype="">match</field>
+                                                                                                        <value name="NAME">
+                                                                                                          <shadow type="textinline" id="@V##Xt,;G+y~zp][(C`z">
+                                                                                                            <field name="text">1</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <statement name="ifstate">
+                                                                                                      <block type="webtypeanything" id="4MKWSYYUmgqAcvmHAxNg">
+                                                                                                        <value name="stuff">
+                                                                                                          <shadow type="textinline" id="cAd5^7XIi?GURLuSWZ9*">
+                                                                                                            <field name="text">self.ocultarCamara()</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="variables_set" id="w9d0)}KecS360jUB:sQp">
+                                                                                                            <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
+                                                                                                            <field name="NAME">=</field>
+                                                                                                            <value name="varset">
+                                                                                                              <shadow type="textinline" id="dz)nY2tY2*S#ceiYmOS5">
+                                                                                                                <field name="text">"Persona2"</field>
+                                                                                                              </shadow>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="webvarprint" id="4YjJQS-(;-/3Tb`uO6z]">
+                                                                                                                <value name="var">
+                                                                                                                  <shadow type="textinline" id="Tqi=Mx:`]hqMGD,Py^-*">
+                                                                                                                    <field name="text">"Veo a Persona2"</field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </statement>
+                                                                                                    <next>
+                                                                                                      <block type="webelse" id="NA0rhhu/K4MGECa#l06X">
+                                                                                                        <statement name="DO">
+                                                                                                          <block type="variables_set" id="nhf2U-J!r^FyDMcPto:$">
+                                                                                                            <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
+                                                                                                            <field name="NAME">=</field>
+                                                                                                            <value name="varset">
+                                                                                                              <shadow type="textinline" id="fPTTG~o=M2.GT($;F1zg">
+                                                                                                                <field name="text">"Desconocido"</field>
+                                                                                                              </shadow>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="webvarprint" id="%?FZYYbx]S|pL78ryZ2E">
+                                                                                                                <value name="var">
+                                                                                                                  <shadow type="textinline" id="`wm06Sy(B!Px3|}!jW+,">
+                                                                                                                    <field name="text">"Veo a un desconocido"</field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </statement>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
                                                                                               </block>
                                                                                             </next>
                                                                                           </block>
@@ -339,126 +398,56 @@
                                                                                       </block>
                                                                                     </statement>
                                                                                     <next>
-                                                                                      <block type="webifinline" id="Um-(T@T-$ZV5U=RQD/()">
+                                                                                      <block type="webifinline" id="b7EFB:k+M#S::,1GAdrr">
                                                                                         <value name="iftext">
                                                                                           <shadow type="textinline" id="C@FWh:#fb9G](m3o;QGF">
-                                                                                            <field name="text">True</field>
+                                                                                            <field name="text">Not</field>
                                                                                           </shadow>
-                                                                                          <block type="selectlist2" id="fNsd+?fZRMDNPKqppm`I">
-                                                                                            <field name="list" id="6!ED)olcitB1;2}:c8W+" variabletype="">match</field>
-                                                                                            <value name="NAME">
-                                                                                              <shadow type="textinline" id="@V##Xt,;G+y~zp][(C`z">
-                                                                                                <field name="text">1</field>
+                                                                                          <block type="webnot" id="Q(b7?)dldFQ~Hdd?mv#8">
+                                                                                            <value name="bool">
+                                                                                              <shadow type="textinline" id="4Fu14!-i}TnAfCv[.|OM">
+                                                                                                <field name="text">caras_detectadas</field>
                                                                                               </shadow>
+                                                                                              <block type="variables_get" id="}=WX/^M/|1@OZF+Xdd8z">
+                                                                                                <field name="VAR" id="w=r7Oky3bkO4#`;0xk/$" variabletype="">caras_detectadas</field>
+                                                                                              </block>
                                                                                             </value>
                                                                                           </block>
                                                                                         </value>
                                                                                         <statement name="ifstate">
-                                                                                          <block type="webtypeanything" id="4MKWSYYUmgqAcvmHAxNg">
-                                                                                            <value name="stuff">
-                                                                                              <shadow type="textinline" id="cAd5^7XIi?GURLuSWZ9*">
-                                                                                                <field name="text">self.ocultarCamara()</field>
+                                                                                          <block type="webvarprint" id="N54}7qtkB=yY%C2um@ZB">
+                                                                                            <value name="var">
+                                                                                              <shadow type="textinline" id="cuQ1nM$gg5.T:kWj[btF">
+                                                                                                <field name="text">"No veo a nadie"</field>
                                                                                               </shadow>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="variables_set" id="w9d0)}KecS360jUB:sQp">
-                                                                                                <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
-                                                                                                <field name="NAME">=</field>
-                                                                                                <value name="varset">
-                                                                                                  <shadow type="textinline" id="dz)nY2tY2*S#ceiYmOS5">
-                                                                                                    <field name="text">"Steve Jobs"</field>
+                                                                                              <block type="webtypeanything" id="MSd`ouiJ9yixY*h50}ad">
+                                                                                                <value name="stuff">
+                                                                                                  <shadow type="textinline" id="GFFKHY(zg+e?-l,j1e8k">
+                                                                                                    <field name="text">self.mostrarCamara()</field>
                                                                                                   </shadow>
                                                                                                 </value>
-                                                                                                <next>
-                                                                                                  <block type="webvarprint" id="4YjJQS-(;-/3Tb`uO6z]">
-                                                                                                    <value name="var">
-                                                                                                      <shadow type="textinline" id="Tqi=Mx:`]hqMGD,Py^-*">
-                                                                                                        <field name="text">"Veo a Steve Jobs"</field>
-                                                                                                      </shadow>
-                                                                                                    </value>
-                                                                                                  </block>
-                                                                                                </next>
                                                                                               </block>
                                                                                             </next>
                                                                                           </block>
                                                                                         </statement>
                                                                                         <next>
-                                                                                          <block type="webelse" id="NA0rhhu/K4MGECa#l06X">
-                                                                                            <statement name="DO">
-                                                                                              <block type="variables_set" id="nhf2U-J!r^FyDMcPto:$">
+                                                                                          <block type="webreturn2" id=":SkUKv(geH,.%J-4g60c">
+                                                                                            <value name="return">
+                                                                                              <shadow type="textinline" id="ivn)2ODP^N~P[cAt/rwB">
+                                                                                                <field name="text">nombre</field>
+                                                                                              </shadow>
+                                                                                              <block type="variables_get" id="c3)Q{%.X?^0sbxF(xmXS">
                                                                                                 <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
-                                                                                                <field name="NAME">=</field>
-                                                                                                <value name="varset">
-                                                                                                  <shadow type="textinline" id="fPTTG~o=M2.GT($;F1zg">
-                                                                                                    <field name="text">"Desconocido"</field>
-                                                                                                  </shadow>
-                                                                                                </value>
-                                                                                                <next>
-                                                                                                  <block type="webvarprint" id="%?FZYYbx]S|pL78ryZ2E">
-                                                                                                    <value name="var">
-                                                                                                      <shadow type="textinline" id="`wm06Sy(B!Px3|}!jW+,">
-                                                                                                        <field name="text">"Veo a un desconocido"</field>
-                                                                                                      </shadow>
-                                                                                                    </value>
-                                                                                                  </block>
-                                                                                                </next>
                                                                                               </block>
-                                                                                            </statement>
+                                                                                            </value>
                                                                                           </block>
                                                                                         </next>
                                                                                       </block>
                                                                                     </next>
                                                                                   </block>
                                                                                 </next>
-                                                                              </block>
-                                                                            </next>
-                                                                          </block>
-                                                                        </statement>
-                                                                        <next>
-                                                                          <block type="webifinline" id="b7EFB:k+M#S::,1GAdrr">
-                                                                            <value name="iftext">
-                                                                              <shadow type="textinline" id="C@FWh:#fb9G](m3o;QGF">
-                                                                                <field name="text">Not</field>
-                                                                              </shadow>
-                                                                              <block type="webnot" id="Q(b7?)dldFQ~Hdd?mv#8">
-                                                                                <value name="bool">
-                                                                                  <shadow type="textinline" id="4Fu14!-i}TnAfCv[.|OM">
-                                                                                    <field name="text">caras_detectadas</field>
-                                                                                  </shadow>
-                                                                                  <block type="variables_get" id="}=WX/^M/|1@OZF+Xdd8z">
-                                                                                    <field name="VAR" id="w=r7Oky3bkO4#`;0xk/$" variabletype="">caras_detectadas</field>
-                                                                                  </block>
-                                                                                </value>
-                                                                              </block>
-                                                                            </value>
-                                                                            <statement name="ifstate">
-                                                                              <block type="webvarprint" id="N54}7qtkB=yY%C2um@ZB">
-                                                                                <value name="var">
-                                                                                  <shadow type="textinline" id="cuQ1nM$gg5.T:kWj[btF">
-                                                                                    <field name="text">"No veo a nadie"</field>
-                                                                                  </shadow>
-                                                                                </value>
-                                                                                <next>
-                                                                                  <block type="webtypeanything" id="MSd`ouiJ9yixY*h50}ad">
-                                                                                    <value name="stuff">
-                                                                                      <shadow type="textinline" id="GFFKHY(zg+e?-l,j1e8k">
-                                                                                        <field name="text">self.mostrarCamara()</field>
-                                                                                      </shadow>
-                                                                                    </value>
-                                                                                  </block>
-                                                                                </next>
-                                                                              </block>
-                                                                            </statement>
-                                                                            <next>
-                                                                              <block type="webreturn2" id=":SkUKv(geH,.%J-4g60c">
-                                                                                <value name="return">
-                                                                                  <shadow type="textinline" id="ivn)2ODP^N~P[cAt/rwB">
-                                                                                    <field name="text">nombre</field>
-                                                                                  </shadow>
-                                                                                  <block type="variables_get" id="c3)Q{%.X?^0sbxF(xmXS">
-                                                                                    <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
-                                                                                  </block>
-                                                                                </value>
                                                                               </block>
                                                                             </next>
                                                                           </block>
@@ -478,134 +467,213 @@
                                               </block>
                                             </next>
                                           </block>
-                                        </next>
+                                        </statement>
                                       </block>
                                     </next>
                                   </block>
                                 </next>
                               </block>
-                            </statement>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="ledset" id="+:_74A8n1Sn6l@{sb3HP" x="-29" y="231">
-    <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
-    <comment pinned="true" h="120" w="160">Nuestro código</comment>
-    <value name="text">
-      <shadow type="textinline" id="|]/yG|SnqRp+gwC@D]Bo">
-        <field name="text">20</field>
-      </shadow>
-    </value>
-    <next>
-      <block type="ledaction" id="]6??;dKwSMM]zgg1PB!@">
-        <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
-        <field name="action">off</field>
-        <value name="text">
-          <shadow type="textinline" id="1q#[g4T*g3ptILabL9CS">
-            <field name="text"></field>
-          </shadow>
-        </value>
-        <next>
-          <block type="variables_set" id="Y2l8CIVmcB*,;gB)iH(5">
-            <field name="VAR" id="vyPcLj=oU93={a]$,#ZO" variabletype="">maquina</field>
-            <field name="NAME">=</field>
-            <value name="varset">
-              <shadow type="textinline" id="aX+$(u2~.h}zrG+^j%QO">
-                <field name="text">Maquina_de_reconocimiento_facial("/home/pi/Desktop/obama.jpg","/home/pi/Desktop/jobs.jpg")</field>
-              </shadow>
-            </value>
-            <next>
-              <block type="webwhileout" id=")CHt-t5bx@A6/IeC}joU">
-                <value name="cond">
-                  <shadow type="textinline" id="$%syg7%dK.q:.qWLtlBD">
-                    <field name="text">True</field>
-                  </shadow>
-                </value>
-                <statement name="DO">
-                  <block type="variables_set" id="p^*G{Swr1UWMf85)ml~K">
-                    <field name="VAR" id="u2ufEY1R).rrzLf=%ar`" variabletype="">nombre</field>
-                    <field name="NAME">=</field>
-                    <value name="varset">
-                      <shadow type="textinline" id="OBRL|g*qt{ni_sOFpD(e">
-                        <field name="text">0</field>
-                      </shadow>
-                      <block type="webprintnew" id="F[6YI4RMSiG:nc~tWFzd">
-                        <field name="params">.</field>
-                        <value name="def">
-                          <block type="variables_get" id="8oe,cwQ-1{k.JFR::;9X">
-                            <field name="VAR" id="vyPcLj=oU93={a]$,#ZO" variabletype="">maquina</field>
-                          </block>
-                        </value>
-                        <value name="text">
-                          <shadow type="textinline" id="TuEV1/yK-nsC@_ydTh,x">
-                            <field name="text">aQuienVeo()</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="webifinline" id="fkgy~C%*Gr_G+god9pe3">
-                        <value name="iftext">
-                          <shadow type="textinline" id="N}OS;^zCx=`nqBub.,,`">
-                            <field name="text"></field>
-                          </shadow>
-                          <block type="webinternal" id="wmPdoq4iL=[$rYW_*)hm">
-                            <field name="choose">==</field>
-                            <value name="first">
-                              <shadow type="textinline" id="$?3+bD0!sW=@!`^B(i3v">
-                                <field name="text">0</field>
-                              </shadow>
-                              <block type="variables_get" id="y@Z!_!|.ysi(mJefI:ef">
-                                <field name="VAR" id="u2ufEY1R).rrzLf=%ar`" variabletype="">nombre</field>
-                              </block>
-                            </value>
-                            <value name="last">
-                              <shadow type="textinline" id="q=IZyeC/O}YdEn=+*yy*">
-                                <field name="text">"Barack Obama"</field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="ifstate">
-                          <block type="ledaction" id=";q`m]H?!mh:YkgE~IBl}">
-                            <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
-                            <field name="action">on</field>
-                            <value name="text">
-                              <shadow type="textinline" id="Hbg-Fjr~i{cW#!y]$?oJ">
-                                <field name="text"></field>
-                              </shadow>
-                            </value>
-                          </block>
-                        </statement>
-                        <next>
-                          <block type="webelse" id="wnS!|ySWcNr5ZK8(zt$g">
-                            <statement name="DO">
-                              <block type="ledaction" id="?/ko2FLGV^hn$K/v:A|2">
-                                <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
-                                <field name="action">off</field>
-                                <value name="text">
-                                  <shadow type="textinline" id="Rxs``bdt}W}o}BWx-~ie">
-                                    <field name="text"></field>
-                                  </shadow>
-                                </value>
-                              </block>
-                            </statement>
+                            </next>
                           </block>
                         </next>
                       </block>
                     </next>
                   </block>
                 </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="import_time" id="z^4loos@c8tsFl~Fs+GX" x="-122" y="-61">
+    <next>
+      <block type="importgpiozero" id="FbW_^T}U?tn]JKt);#io">
+        <next>
+          <block type="ledset" id="+:_74A8n1Sn6l@{sb3HP">
+            <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
+            <value name="text">
+              <shadow type="textinline" id="|]/yG|SnqRp+gwC@D]Bo">
+                <field name="text">20</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="ledaction" id="]6??;dKwSMM]zgg1PB!@">
+                <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
+                <field name="action">off</field>
+                <value name="text">
+                  <shadow type="textinline" id="1q#[g4T*g3ptILabL9CS">
+                    <field name="text"></field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="variables_set" id="Y2l8CIVmcB*,;gB)iH(5">
+                    <field name="VAR" id="vyPcLj=oU93={a]$,#ZO" variabletype="">maquina</field>
+                    <field name="NAME">=</field>
+                    <value name="varset">
+                      <shadow type="textinline" id="aX+$(u2~.h}zrG+^j%QO">
+                        <field name="text">Maquina_de_reconocimiento_facial("/home/pi/Desktop/obama.jpg","/home/pi/Desktop/jobs.jpg")</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="webwhileout" id=")CHt-t5bx@A6/IeC}joU">
+                        <value name="cond">
+                          <shadow type="textinline" id="$%syg7%dK.q:.qWLtlBD">
+                            <field name="text">True</field>
+                          </shadow>
+                        </value>
+                        <statement name="DO">
+                          <block type="variables_set" id="p^*G{Swr1UWMf85)ml~K">
+                            <field name="VAR" id="u2ufEY1R).rrzLf=%ar`" variabletype="">nombre</field>
+                            <field name="NAME">=</field>
+                            <value name="varset">
+                              <shadow type="textinline" id="OBRL|g*qt{ni_sOFpD(e">
+                                <field name="text">0</field>
+                              </shadow>
+                              <block type="webprintnew" id="F[6YI4RMSiG:nc~tWFzd">
+                                <field name="params">.</field>
+                                <value name="def">
+                                  <block type="variables_get" id="8oe,cwQ-1{k.JFR::;9X">
+                                    <field name="VAR" id="vyPcLj=oU93={a]$,#ZO" variabletype="">maquina</field>
+                                  </block>
+                                </value>
+                                <value name="text">
+                                  <shadow type="textinline" id="TuEV1/yK-nsC@_ydTh,x">
+                                    <field name="text">aQuienVeo()</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="webifinline" id="fkgy~C%*Gr_G+god9pe3">
+                                <value name="iftext">
+                                  <shadow type="textinline" id="N}OS;^zCx=`nqBub.,,`">
+                                    <field name="text"></field>
+                                  </shadow>
+                                  <block type="webinternal" id="wmPdoq4iL=[$rYW_*)hm">
+                                    <field name="choose">==</field>
+                                    <value name="first">
+                                      <shadow type="textinline" id="$?3+bD0!sW=@!`^B(i3v">
+                                        <field name="text">0</field>
+                                      </shadow>
+                                      <block type="variables_get" id="y@Z!_!|.ysi(mJefI:ef">
+                                        <field name="VAR" id="u2ufEY1R).rrzLf=%ar`" variabletype="">nombre</field>
+                                      </block>
+                                    </value>
+                                    <value name="last">
+                                      <shadow type="textinline" id="q=IZyeC/O}YdEn=+*yy*">
+                                        <field name="text">"Persona1"</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="ifstate">
+                                  <block type="ledaction" id=";q`m]H?!mh:YkgE~IBl}">
+                                    <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
+                                    <field name="action">on</field>
+                                    <value name="text">
+                                      <shadow type="textinline" id="Hbg-Fjr~i{cW#!y]$?oJ">
+                                        <field name="text"></field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="webelifinline" id="9$Xq/g*_KFEhlBekx).P">
+                                    <value name="iftext">
+                                      <shadow type="textinline" id="1LEm#BuMdsBYaq7M5A(k">
+                                        <field name="text">True</field>
+                                      </shadow>
+                                      <block type="webinternal" id="O{Ue`om$^#*1g;o*s::l">
+                                        <field name="choose">==</field>
+                                        <value name="first">
+                                          <shadow type="textinline" id="$?3+bD0!sW=@!`^B(i3v">
+                                            <field name="text">0</field>
+                                          </shadow>
+                                          <block type="variables_get" id="NELGQ9Zc8q~)y?{km(On">
+                                            <field name="VAR" id="u2ufEY1R).rrzLf=%ar`" variabletype="">nombre</field>
+                                          </block>
+                                        </value>
+                                        <value name="last">
+                                          <shadow type="textinline" id="oQmc049dK`GFmlULdeF-">
+                                            <field name="text">"Persona2"</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="ifstate">
+                                      <block type="ledaction" id="b?PL3[!jj)YX;v8z%F8U">
+                                        <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
+                                        <field name="action">on</field>
+                                        <value name="text">
+                                          <shadow type="textinline" id="z?9VU+.J7hR;G-a)7ZUU">
+                                            <field name="text"></field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="webelifinline" id="|]zIgw}e3VDh$J65p60/">
+                                        <value name="iftext">
+                                          <shadow type="textinline" id="1LEm#BuMdsBYaq7M5A(k">
+                                            <field name="text">True</field>
+                                          </shadow>
+                                          <block type="webinternal" id="4)fR[KdL!p0kHWCnSS8{">
+                                            <field name="choose">==</field>
+                                            <value name="first">
+                                              <shadow type="textinline" id="$?3+bD0!sW=@!`^B(i3v">
+                                                <field name="text">0</field>
+                                              </shadow>
+                                              <block type="variables_get" id="k,gs_d^ityzjuSNOZggQ">
+                                                <field name="VAR" id="u2ufEY1R).rrzLf=%ar`" variabletype="">nombre</field>
+                                              </block>
+                                            </value>
+                                            <value name="last">
+                                              <shadow type="textinline" id="z#Q,bQR%nbQ|7,1*}x6H">
+                                                <field name="text">"Desconocido"</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <statement name="ifstate">
+                                          <block type="ledaction" id=":(s]d1-/LDpNv]x7ILY=">
+                                            <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
+                                            <field name="action">on</field>
+                                            <value name="text">
+                                              <shadow type="textinline" id="P+[d;b]?}aR{~R%71{L(">
+                                                <field name="text"></field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="webelse" id="wnS!|ySWcNr5ZK8(zt$g">
+                                            <statement name="DO">
+                                              <block type="ledaction" id="?/ko2FLGV^hn$K/v:A|2">
+                                                <field name="led" id="sb@JSv1])@Gz_-ZwKh[." variabletype="">led</field>
+                                                <field name="action">off</field>
+                                                <value name="text">
+                                                  <shadow type="textinline" id="Rxs``bdt}W}o}BWx-~ie">
+                                                    <field name="text"></field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
