@@ -411,21 +411,30 @@
                                                                                                     <next>
                                                                                                       <block type="webelse" id="NA0rhhu/K4MGECa#l06X">
                                                                                                         <statement name="DO">
-                                                                                                          <block type="variables_set" id="nhf2U-J!r^FyDMcPto:$">
-                                                                                                            <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
-                                                                                                            <field name="NAME">=</field>
-                                                                                                            <value name="varset">
-                                                                                                              <shadow type="textinline" id="fPTTG~o=M2.GT($;F1zg">
-                                                                                                                <field name="text">"Desconocido"</field>
+                                                                                                          <block type="webtypeanything" id=".}aP33#x:G9j66,bOQ3A">
+                                                                                                            <value name="stuff">
+                                                                                                              <shadow type="textinline" id="m1@|5B`|$fa2;np41E$f">
+                                                                                                                <field name="text">self.ocultarCamara()</field>
                                                                                                               </shadow>
                                                                                                             </value>
                                                                                                             <next>
-                                                                                                              <block type="webvarprint" id="%?FZYYbx]S|pL78ryZ2E">
-                                                                                                                <value name="var">
-                                                                                                                  <shadow type="textinline" id="`wm06Sy(B!Px3|}!jW+,">
-                                                                                                                    <field name="text">"Veo a un desconocido"</field>
+                                                                                                              <block type="variables_set" id="nhf2U-J!r^FyDMcPto:$">
+                                                                                                                <field name="VAR" id="^OY-xI8(*8DON!1bKl.j" variabletype="">name</field>
+                                                                                                                <field name="NAME">=</field>
+                                                                                                                <value name="varset">
+                                                                                                                  <shadow type="textinline" id="fPTTG~o=M2.GT($;F1zg">
+                                                                                                                    <field name="text">"Desconocido"</field>
                                                                                                                   </shadow>
                                                                                                                 </value>
+                                                                                                                <next>
+                                                                                                                  <block type="webvarprint" id="%?FZYYbx]S|pL78ryZ2E">
+                                                                                                                    <value name="var">
+                                                                                                                      <shadow type="textinline" id="`wm06Sy(B!Px3|}!jW+,">
+                                                                                                                        <field name="text">"Veo a un desconocido"</field>
+                                                                                                                      </shadow>
+                                                                                                                    </value>
+                                                                                                                  </block>
+                                                                                                                </next>
                                                                                                               </block>
                                                                                                             </next>
                                                                                                           </block>
