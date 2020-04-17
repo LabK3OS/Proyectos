@@ -14,7 +14,7 @@ tamanoRectangulo = 150;
 def reiniciarPosicionPelota():
 	global posicionPelotaX,posicionPelotaY, velocidadX, velocidadY
 	posicionPelotaX = ancho/2
-    posicionPelotaY = alto/2
+	posicionPelotaY = alto/2
     velocidadX = random.randint(3, 10)
     velocidadY = random.randint(3, 10)
 
